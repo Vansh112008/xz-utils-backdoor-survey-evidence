@@ -203,15 +203,98 @@ The report is an industry threat intelligence publication, not a peer-reviewed a
 
 **Limitations:** The analysis focuses on Red Hat's products and ecosystem. It is not a comparative study of all Linux distributions or a peer-reviewed evaluation of software supply-chain security.
 
-## Review Progress
 
-| Review | Source | Status |
-|---|---|---|
-| 1 | OpenSSF (2024) | Reviewed |
-| 2 | Datadog Security Labs (2024) | Reviewed |
-| 3 | Przymus and Durieux (2025) | Reviewed |
-| 4 | Burkert (2024) | Reviewed |
-| 5 | FTI Cybersecurity (2024) | Reviewed |
+## 11. Reichert, B. M., and Obelheiro, R. R. (2024) — Software Supply Chain Security: A Systematic Literature Review
 
-**Target: 25 individually reviewed sources.**
+**Reference:** B. M. Reichert and R. R. Obelheiro, “Software supply chain security: a systematic literature review,” *International Journal of Computers and Applications*, vol. 46, no. 10, pp. 853–867, 2024.  
+**DOI:** https://doi.org/10.1080/1206212X.2024.2390978  
+**Source:** https://www.tandfonline.com/doi/full/10.1080/1206212X.2024.2390978  
+**Publication type:** Peer-reviewed journal article / systematic literature review.
+
+**Objective and scope:** The study examines research on software supply chain security, including the security of software development and distribution infrastructure and the risks introduced by external dependencies.
+
+**Method and contribution:** The authors conducted a systematic literature review of research published between 2012 and 2023. Their search covered IEEE Xplore, ACM Digital Library, Engineering Village, Scopus, and arXiv. From 2,051 initially identified studies, 85 were considered relevant.
+
+**Key findings:** The review identifies gaps in research, including limited attention to cloud-related software supply chains, insufficient focus on software distribution, and limited use of threat-modelling frameworks to identify and validate supply-chain threats.
+
+**Relevance to this survey:** This paper provides a research-based foundation for examining the XZ Utils incident as a software supply-chain security failure rather than only a vulnerability in an individual library.
+
+**Limitations:** The review covers literature only up to 2023, so it does not include the XZ Utils incident itself. Its findings provide broader context rather than a direct forensic analysis of CVE-2024-3094.
+
+---
+
+## 12. Ladisa, P., Plate, H., Martinez, M., and Barais, O. (2023) — SoK: Taxonomy of Attacks on Open-Source Software Supply Chains
+
+**Reference:** P. Ladisa, H. Plate, M. Martinez, and O. Barais, “SoK: Taxonomy of Attacks on Open-Source Software Supply Chains,” in *2023 IEEE Symposium on Security and Privacy (SP)*, 2023, pp. 1509–1526.  
+**DOI:** https://doi.org/10.1109/SP46215.2023.10179304  
+**Source:** https://oaklandsok.github.io/papers/ladisa2023.pdf  
+**Publication type:** Peer-reviewed security research conference paper.
+
+**Objective and scope:** The paper develops a structured taxonomy of attacks against open-source software supply chains, covering different stages from code contribution to package distribution.
+
+**Method and contribution:** The authors use a systematisation-of-knowledge approach to classify attack techniques and connect them with documented incidents and possible safeguards. The taxonomy identifies 107 attack vectors associated with 94 real-world incidents and maps them to 33 mitigating safeguards. Surveys involving 17 domain experts and 134 software developers were used to assess the taxonomy.
+
+**Key findings:** Open-source supply chains expose multiple opportunities for malicious code injection. Security measures must therefore address more than source-code vulnerabilities; they must also consider contributors, repositories, build processes, and distribution mechanisms.
+
+**Relevance to this survey:** The taxonomy provides a useful framework for classifying the XZ Utils attack across contributor trust, source repositories, release packaging, build-time execution, and distribution.
+
+**Limitations:** The taxonomy is broad and not designed specifically around the XZ Utils incident. Its safeguards are mapped to attack vectors but are not all experimentally validated as complete prevention mechanisms.
+
+---
+
+## 13. Gu, Y., Ying, L., Pu, Y., Hu, X., Chai, H., Wang, R., Gao, X., and Duan, H. (2023) — Investigating Package Related Security Threats in Software Registries
+
+**Reference:** Y. Gu, L. Ying, Y. Pu, X. Hu, H. Chai, R. Wang, X. Gao, and H. Duan, “Investigating Package Related Security Threats in Software Registries,” in *2023 IEEE Symposium on Security and Privacy (SP)*, 2023.  
+**DOI:** https://doi.org/10.1109/SP46215.2023.10179332  
+**Source:** https://luneresearch.com/papers/1fb645f5-7b2f-40f5-895c-ce3a32d87abb  
+**Publication type:** Peer-reviewed security research conference paper.
+
+**Objective and scope:** The study investigates security weaknesses in software package registries and examines how inconsistencies between registries, mirrors, and package clients can be exploited to distribute malicious software.
+
+**Method and contribution:** The authors systematically analysed six software registry ecosystems and their associated mirrors and clients. They identified 12 potential attack vectors, including six reported for the first time. They developed RScouter, a framework for monitoring registry-related threats, and conducted a one-year measurement study involving six registries and 17 popular mirrors.
+
+**Key findings:** The research examined more than four million packages across 53 million package versions and found security threats in all six ecosystems. Some identified weaknesses had already been exploited by attackers.
+
+**Relevance to this survey:** The study demonstrates that software supply-chain risk extends beyond source-code repositories to package registries and distribution infrastructure. This is relevant when analysing how compromised software can reach downstream users.
+
+**Limitations:** The study focuses on registry ecosystems and package distribution. It does not directly investigate malicious maintainer behaviour or the specific build-time injection technique used in XZ Utils.
+
+---
+
+## 14. Butler, S., et al. (2023) — On Business Adoption and Use of Reproducible Builds for Open and Closed Source Software
+
+**Reference:** S. Butler et al., “On business adoption and use of reproducible builds for open and closed source software,” *Software Quality Journal*, vol. 31, pp. 687–719, 2023.  
+**DOI:** https://doi.org/10.1007/s11219-022-09607-z  
+**Source:** https://link.springer.com/article/10.1007/s11219-022-09607-z  
+**Publication type:** Peer-reviewed journal article.
+
+**Objective and scope:** The study examines how businesses understand, adopt, and use reproducible builds in open-source and closed-source software development.
+
+**Method and contribution:** The authors investigate practitioner and business perspectives through interviews and discussions. The research explores awareness of reproducible builds, technical and organisational barriers, and their practical value in software development.
+
+**Key findings:** Reproducible builds can establish whether a distributed binary corresponds to the source code from which it is claimed to have been produced. The study identifies their value for traceability, collaborative development, and security-related applications. However, adoption remains limited, partly because organisations do not always see a clear business benefit.
+
+**Relevance to this survey:** The XZ Utils incident demonstrated the danger of trusting release artefacts without adequately verifying their relationship to source code. Reproducible builds provide an important potential safeguard against this type of discrepancy.
+
+**Limitations:** The study examines business adoption and practitioner perspectives rather than testing reproducible builds against the XZ Utils backdoor. Its findings also depend partly on the organisations and practitioners represented in the interviews.
+
+---
+
+## 15. Andreoli, A., Lounis, A., Debbabi, M., and Hanna, A. (2023) — On the Prevalence of Software Supply Chain Attacks: Empirical Study and Investigative Framework
+
+**Reference:** A. Andreoli, A. Lounis, M. Debbabi, and A. Hanna, “On the prevalence of software supply chain attacks: Empirical study and investigative framework,” *Forensic Science International: Digital Investigation*, vol. 44, Supplement, article 301508, 2023.  
+**DOI:** https://doi.org/10.1016/j.fsidi.2023.301508  
+**Source:** https://dfrws.org/wp-content/uploads/2023/03/On_the_prevalence_of_software_supply_chain_attacks_Empirical_study.pdf  
+**Publication type:** Peer-reviewed digital forensics research article.
+
+**Objective and scope:** The study examines the characteristics of software supply-chain attacks and proposes an investigative framework for identifying and assessing malicious behaviour in distributed software.
+
+**Method and contribution:** The authors analyse prominent supply-chain attacks and develop an investigative approach for binary analysis. Their framework considers behavioural identification, assessment of malicious intent, and the matching of suspicious behaviours through semantic graphs. The study also examines the historical presence of attack-related behaviours in malware datasets.
+
+**Key findings:** The authors report that behaviours associated with the examined supply-chain attacks had existed in their dataset for approximately 13–21 years before the corresponding attacks. This suggests that some malicious behaviours may be detectable before they are used in major supply-chain incidents.
+
+**Relevance to this survey:** The study supports the importance of behavioural analysis and forensic investigation in identifying malicious software distributed through trusted channels. These ideas are relevant to examining the XZ Utils payload and its concealed execution behaviour.
+
+**Limitations:** The study focuses on selected historical supply-chain attacks and binary behaviour. It predates the XZ Utils incident and does not directly evaluate the specific obfuscation and build-time techniques used in CVE-2024-3094.
+
 
