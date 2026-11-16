@@ -208,7 +208,7 @@ Dynamic analysis evaluates software behaviour during execution. It can help iden
 
 Its effectiveness depends on the quality of test environments, execution coverage, and the ability to reproduce the relevant conditions.
 
-## 5.3 Software Composition Analysis [17], [18]
+## 5.3 Software Composition Analysis
 
 Software Composition Analysis (SCA) identifies third-party dependencies and checks them against known vulnerability information.
 
@@ -283,17 +283,7 @@ Future studies should investigate maintainer workload, contributor trust, govern
 
 ---
 
-# Figures
-
-- Figure 1: Literature Selection Process (conceptual; numerical screening counts are not yet available).
-- Figure 2: Taxonomy of Software Supply-Chain Attacks.
-- Figure 3: Software Supply-Chain Security Lifecycle.
-
-The figure source files are maintained in the `figures/` directory. Render them to SVG or PNG and verify that they are embedded and legible in the final submission document.
-
-
-
-## 8. Classification of Reviewed Literature
+# 8. Classification of Reviewed Literature
 
 The reviewed literature consists of academic research, incident investigations, institutional advisories, and industry reports [3]–[9], [14], [21], [25]. These source categories contribute different forms of evidence to the understanding of software supply-chain security.
 
@@ -309,7 +299,7 @@ The reviewed literature consists of academic research, incident investigations, 
 
 **Discussion:** The different source categories complement one another. Incident-specific investigations provide direct evidence about the XZ Utils compromise, while academic studies help explain the broader weaknesses that make software supply-chain attacks possible. Institutional advisories and technical guidance support the development of practical security recommendations.
 
-## 9. Comparative Analysis of Supply-Chain Attack Categories
+# 9. Comparative Analysis of Supply-Chain Attack Categories
 
 Software supply-chain attacks can target different stages of software development and distribution [7], [14], [21], [22], [23]. Understanding these categories helps identify where preventive and detective controls should be implemented.
 
@@ -325,7 +315,7 @@ Software supply-chain attacks can target different stages of software developmen
 
 **Discussion:** The XZ Utils incident is particularly relevant to contributor trust, source changes, and release/build integrity. These categories may overlap in a sophisticated attack. Consequently, organisations should not depend on a single security control to protect their software supply chains.
 
-## 10. Comparison of Security Detection and Prevention Techniques
+# 10. Comparison of Security Detection and Prevention Techniques
 
 Different security techniques address different stages of the software supply chain [11]–[13], [16], [19], [24]. Their effectiveness depends on the threat being investigated and the quality of implementation.
 
@@ -343,7 +333,7 @@ Different security techniques address different stages of the software supply ch
 
 **Discussion:** No single technique is sufficient to prevent all supply-chain attacks. Static and dynamic analysis support detection [16], [19], while reproducible builds, provenance, and independent reviews improve integrity and accountability [9], [11]–[15], [20]. Combining these techniques provides stronger protection than relying on any one approach.
 
-## 11. Recommended Security Measures
+# 11. Recommended Security Measures
 
 The XZ Utils incident demonstrates the need for multiple layers of security across open-source development, build, and distribution processes.
 
@@ -361,6 +351,14 @@ The XZ Utils incident demonstrates the need for multiple layers of security acro
 | Limited security resources | Maintainer training and shared security infrastructure | Improves project-wide security maturity |
 
 **Discussion:** These measures should be implemented as a coordinated security strategy. Their effectiveness depends on project size, available resources, threat exposure, and the criticality of the software. Open-source projects should prioritise practical controls that can be maintained consistently over time.
+
+# Figures
+
+- Figure 1: Literature Selection Process (conceptual; numerical screening counts are not yet available).
+- Figure 2: Taxonomy of Software Supply-Chain Attacks.
+- Figure 3: Software Supply-Chain Security Lifecycle.
+
+The figure source files are maintained in the `figures/` directory. Render them to SVG or PNG and verify that they are embedded and legible in the final submission document.
 
 # 12. Conclusion
 
