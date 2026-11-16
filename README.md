@@ -14,7 +14,7 @@
 - **Course code:** CSE25305
 - **Faculty:** Dr. Abhishek Pandey
 - **Institute email:** vansh.2025.ug25@iilm.edu
-- **Submission date:** 15 November 2026 (confirm this is the actual submission date before final submission)
+- **Submission date:** 16 November 2026
 
 ## Project Overview
 
@@ -62,13 +62,13 @@ The project is intended to include:
 - IEEE-style in-text citations and references.
 - Relevant academic research, technical investigations and official security advisories.
 
-The repository currently contains 25 numbered literature-review entries and 25 BibTeX records. These counts do not by themselves establish that every source is accurate, eligible, peer-reviewed, or correctly cited. Publication metadata and the year requirement must be checked against the original publisher or source records before submission.
+The repository contains 25 numbered literature-review entries and 25 distinct BibTeX records. The sources include peer-reviewed papers, official advisories, a vulnerability record, government guidance, technical investigations and a clearly labelled arXiv preprint. The literature matrix distinguishes these publication types. The final curated set includes 25 records published in 2023–2025.
 
 ## Research Methodology and Evidence Integrity
 
-The search log currently records the planned search queries and selection criteria. Search dates, platforms actually searched, result counts, duplicate counts and screening totals have not been supplied as completed evidence. They must be filled only from the student's actual search history and screening records. Do not present planned platforms as platforms already searched, and do not estimate or invent counts.
+The search log records a fresh online source-discovery and metadata-verification pass conducted on 16 November 2026. It lists the actual search themes and the official/publisher sources checked. The discovery interface did not provide stable per-query hit counts, and the student's historic search dates and hit counts were not retained; neither has been invented. The final curated set contains 25 distinct works published between 2023 and 2025. This is the included-source count, not a count of initial search hits.
 
-The literature-selection flowchart is therefore a conceptual process diagram until actual screening figures are documented.
+The literature-selection flowchart documents the current verification and curation workflow. It intentionally does not display fabricated historical screening totals.
 
 ## Academic Integrity and AI Declaration
 
@@ -76,7 +76,7 @@ ChatGPT (OpenAI) was used to assist with topic development, research organisatio
 
 ## Submission Status
 
-This repository contains working research materials. Before submission, complete the search log and screening evidence, verify every reference, integrate and check IEEE-style in-text citations and the numbered reference list, render and inspect all figures, and place the final PDF and editable document in a clearly labelled submission folder if required by the assignment.
+This repository contains the evidence library and source materials used for the final survey report. The final PDF and editable DOCX have been prepared separately for download. Before submission, open the repository URL from the PDF, confirm the course details and faculty spelling, and check the final document against any additional instructions from the course coordinator.
 
 ## Important Note
 
