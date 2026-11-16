@@ -365,3 +365,22 @@ Different security techniques address different stages of the software supply ch
 
 **Discussion:** No single technique is sufficient to prevent all supply-chain attacks. Static and dynamic analysis support detection, while reproducible builds, provenance, and independent reviews improve integrity and accountability. Combining these techniques provides stronger protection than relying on any one approach.
 
+## 12. Recommended Security Measures
+
+The XZ Utils incident demonstrates the need for multiple layers of security across open-source development, build, and distribution processes.
+
+**Table 4. Recommended security measures for open-source software supply chains**
+
+| Identified risk | Recommended measure | Expected security benefit |
+|---|---|---|
+| Compromised maintainer accounts | Multi-factor authentication and least-privilege access | Reduces unauthorised access |
+| Malicious code contributions | Independent review and protected branches | Improves code-change accountability |
+| Manipulated build processes | Isolated and reproducible builds | Strengthens build integrity |
+| Tampered software releases | Digital signatures and provenance verification | Improves package authenticity |
+| Vulnerable or malicious dependencies | Dependency monitoring and SCA tools | Improves visibility into third-party risks |
+| Undetected runtime behaviour | Dynamic analysis and behavioural monitoring | Helps identify suspicious execution |
+| Delayed incident response | Vulnerability disclosure and response procedures | Supports timely mitigation |
+| Limited security resources | Maintainer training and shared security infrastructure | Improves project-wide security maturity |
+
+**Discussion:** These measures should be implemented as a coordinated security strategy. Their effectiveness depends on project size, available resources, threat exposure, and the criticality of the software. Open-source projects should prioritise practical controls that can be maintained consistently over time.
+
