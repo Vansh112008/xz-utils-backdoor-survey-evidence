@@ -444,9 +444,9 @@ The report is an industry threat intelligence publication, not a peer-reviewed a
 
 ---
 
-## 24. Kinder, J. (2023) — Differential Static Analysis for Detecting Malicious Updates to Open Source Packages
+## 24. Fröh, F. N., Gobbi, M. F., and Kinder, J. (2023) — Differential Static Analysis for Detecting Malicious Updates to Open Source Packages
 
-**Reference:** J. Kinder, “Differential Static Analysis for Detecting Malicious Updates to Open Source Packages,” in *Proceedings of the 2023 Workshop on Software Supply Chain Offensive Research and Ecosystem Defenses (SCORED '23)*, 2023, pp. 41–49.  
+**Reference:** F. N. Fröh, M. F. Gobbi, and J. Kinder, “Differential Static Analysis for Detecting Malicious Updates to Open Source Packages,” in *Proceedings of the 2023 Workshop on Software Supply Chain Offensive Research and Ecosystem Defenses (SCORED '23)*, 2023, pp. 41–49.  
 **DOI:** https://doi.org/10.1145/3605770.3625211  
 **Source:** https://doi.org/10.1145/3605770.3625211  
 **Publication type:** Research workshop paper.
