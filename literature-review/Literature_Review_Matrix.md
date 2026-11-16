@@ -84,55 +84,38 @@ The study focuses on reconstructing one incident. Its findings should not automa
 
 ---
 
-### Review 4
+## 4. Chandramouli, R., Kautz, F., and Torres-Arias, S. (2024) — Strategies for the Integration of Software Supply Chain Security in DevSecOps CI/CD Pipelines
 
-**Title:** Investigation of CVE-2024-3094: The XZ Utils Backdoor and Its Averted Network Security Impact  
-**Author:** Niko Burkert  
-**Year:** 2024  
-**Institution:** Institute of Distributed Systems, University of Ulm  
-**Type:** University technical research report  
-**Source:** https://nurkert.de/pdfs/xz_utils_backdoor.pdf
+**Reference:** R. Chandramouli, F. Kautz, and S. Torres-Arias, *Strategies for the Integration of Software Supply Chain Security in DevSecOps CI/CD Pipelines*, NIST SP 800-204D, Feb. 12, 2024.  
+**DOI:** https://doi.org/10.6028/NIST.SP.800-204D  
+**Publication type:** Government technical standard / guidance.
 
-**Objective:**  
-The report investigates the technical operation of the XZ Utils backdoor and evaluates its potential consequences for network security.
+**Objective and scope:** The publication provides practical strategies for integrating software supply-chain security controls into DevSecOps continuous integration and continuous delivery (CI/CD) pipelines.
 
-**Approach:**  
-The author examines XZ Utils, the liblzma library, the vulnerability's technical implementation and the methods used to conceal malicious functionality within the build process.
+**Method and contribution:** NIST organises security assurance activities around software production stages such as build, test, package and deployment, and maps the strategies to the Secure Software Development Framework.
 
-**Key Findings:**  
-The report explains how malicious components were embedded and extracted during package compilation. It discusses the relationship between liblzma and SSH-related system components and demonstrates how a compromised dependency could create an avenue for unauthorised access.
+**Key findings and contribution:** The guidance treats supply-chain integrity as a lifecycle concern and identifies controls relating to artifacts, attestations, repositories, provenance and software bills of materials.
 
-**Relevance to the Present Study:**  
-This source provides detailed technical material for explaining the attack chain, build-stage manipulation and the relationship between software dependencies and system security.
+**Relevance to this survey:** It provides an authoritative control framework for the build and delivery risks highlighted by the XZ Utils incident.
 
-**Limitations:**  
-The report is primarily a technical investigation of a single vulnerability. It does not establish the effectiveness of security controls through large-scale empirical testing.
-
+**Limitations:** It is guidance rather than an empirical evaluation of the XZ attack or a proof that implementing the listed controls prevents every compromise.
 ---
 
-### Review 5
+## 5. Yu, S., Song, W., Hu, X., and Yin, H. (2024) — On the Correctness of Metadata-Based SBOM Generation: A Differential Analysis Approach
 
-**Title:** XZ Utils Supply Chain Attack Highlights Pitfalls of Open-Source Software Dependencies  
-**Author:** FTI Cybersecurity  
-**Year:** 2024  
-**Type:** Threat intelligence report  
-**Source:** https://fticybersecurity.com/wp-content/uploads/2024/04/DRAFT_FTI-Cybersecurity-Threat-Intelligence-Report-XZ-Utils-Open-Source-Software-Dependencies.pdf
+**Reference:** S. Yu, W. Song, X. Hu, and H. Yin, “On the correctness of metadata-based SBOM generation: A differential analysis approach,” in *Proc. 54th Annual IEEE/IFIP International Conference on Dependable Systems and Networks*, 2024.  
+**DOI:** https://doi.org/10.1109/DSN58291.2024.00018  
+**Publication type:** Peer-reviewed conference paper.
 
-**Objective:**  
-The report examines the XZ Utils incident as an example of the security risks associated with open-source dependencies and software supply-chain relationships.
+**Objective and scope:** The study evaluates whether commonly used software bill of materials (SBOM) generators accurately represent software components and dependencies.
 
-**Approach:**  
-The report analyses the attacker's activities, the development history of the compromised project, the insertion of malicious code and the potential consequences for organisations relying on open-source components.
+**Method and contribution:** The authors perform differential analysis across four SBOM-generation tools and compare their output for dependency omissions and inconsistencies.
 
-**Key Findings:**  
-The report highlights the importance of contributor privileges, dependency visibility and the security of software build processes. It also discusses how trust accumulated through apparently legitimate development contributions can be exploited to compromise a widely used component.
+**Key findings:** The evaluation reports inconsistent SBOMs and missing dependencies across the evaluated tools. The authors also describe a parser-confusion attack that can conceal components in generated inventories.
 
-**Relevance to the Present Study:**  
-This report helps connect the specific XZ Utils incident with organisational cybersecurity concerns, particularly third-party dependency management, software provenance and supply-chain risk assessment.
+**Relevance to this survey:** The work shows that an SBOM is useful only when its component inventory is sufficiently accurate. This matters when organisations need to identify exposure to a compromised dependency such as XZ Utils.
 
-**Limitations:**  
-The report is an industry threat intelligence publication, not a peer-reviewed academic experiment. Its conclusions should be considered alongside primary technical evidence and academic research.
-
+**Limitations:** The study evaluates metadata-based SBOM generation, not malicious maintainer behaviour or the full XZ attack chain.
 ---
 
 ## 6. Andres Freund (2024) — Original disclosure of the XZ Utils backdoor
@@ -177,18 +160,21 @@ The report is an industry threat intelligence publication, not a peer-reviewed a
 
 ---
 
-## 9. Microsoft (2024) — FAQ and guidance for the XZ Utils backdoor
+## 9. Schueller, W., and Wachs, J. (2024) — Modeling Interconnected Social and Technical Risks in Open Source Software Ecosystems
 
-**Reference:** B. Brekkan, “Microsoft FAQ and guidance for XZ Utils backdoor,” Microsoft Community Hub, April 1, 2024.  
-**Source:** https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/microsoft-faq-and-guidance-for-xz-utils-backdoor/4101961  
-**Publication type:** Industry security analysis and guidance.
+**Reference:** W. Schueller and J. Wachs, “Modeling interconnected social and technical risks in open source software ecosystems,” *Big Data & Society*, 2024.  
+**DOI:** https://doi.org/10.1177/26339137241231912  
+**Publication type:** Peer-reviewed journal research article.
 
-**Review:** Microsoft's guidance explains the role of XZ Utils in Linux environments and the implications of the compromise affecting versions 5.6.0 and 5.6.1. It discusses the potential interaction between `liblzma` and OpenSSH, and provides guidance for assessing exposure and responding to the vulnerability. The publication is useful for understanding how organisations can approach vulnerability assessment and incident response when a widely used open-source dependency is compromised.
+**Objective and scope:** The paper studies how social and technical risks interact in open-source ecosystems, including the concentration of maintenance responsibilities and dependency relationships.
 
-**Relevance:** Connects the technical incident to enterprise security monitoring, exposure assessment, and mitigation practices.
+**Method and contribution:** The authors present a methodological framework that models ecosystem risk using both software dependencies and the developers who maintain interconnected libraries.
 
-**Limitations:** The publication is vendor guidance rather than independent academic research. Its recommendations are oriented towards Microsoft's security products and enterprise users.
+**Key findings:** The work argues that technical dependency risks and social factors such as maintainer concentration should be examined together rather than as separate problems.
 
+**Relevance to this survey:** The XZ Utils incident illustrates why project governance, maintainer workload and contributor trust can be as important as code-level controls.
+
+**Limitations:** The paper develops a general ecosystem risk framework; it is not a forensic reconstruction of CVE-2024-3094.
 ---
 
 ## 10. Red Hat (2024) — CVE-2024-3094 security analysis
@@ -280,23 +266,21 @@ The report is an industry threat intelligence publication, not a peer-reviewed a
 
 ---
 
-## 15. Andreoli, A., Lounis, A., Debbabi, M., and Hanna, A. (2023) — On the Prevalence of Software Supply Chain Attacks: Empirical Study and Investigative Framework
+## 15. Lins, M., Mayrhofer, R., Roland, M., Hofer, D., and Schwaighofer, M. (2024) — On the Critical Path to Implant Backdoors and the Effectiveness of Potential Mitigation Techniques: Early Learnings from XZ
 
-**Reference:** A. Andreoli, A. Lounis, M. Debbabi, and A. Hanna, “On the prevalence of software supply chain attacks: Empirical study and investigative framework,” *Forensic Science International: Digital Investigation*, vol. 44, Supplement, article 301508, 2023.  
-**DOI:** https://doi.org/10.1016/j.fsidi.2023.301508  
-**Source:** https://dfrws.org/wp-content/uploads/2023/03/On_the_prevalence_of_software_supply_chain_attacks_Empirical_study.pdf  
-**Publication type:** Peer-reviewed digital forensics research article.
+**Reference:** M. Lins, R. Mayrhofer, M. Roland, D. Hofer, and M. Schwaighofer, “On the critical path to implant backdoors and the effectiveness of potential mitigation techniques: Early learnings from XZ,” arXiv:2404.08987, Apr. 13, 2024.  
+**Source:** https://arxiv.org/abs/2404.08987  
+**Publication type:** Research preprint (arXiv); do not describe as peer-reviewed conference proceedings unless a later peer-reviewed version is separately cited.
 
-**Objective and scope:** The study examines the characteristics of software supply-chain attacks and proposes an investigative framework for identifying and assessing malicious behaviour in distributed software.
+**Objective and scope:** The paper analyses the XZ backdoor attack path and discusses possible mitigation techniques at different stages of the software supply chain.
 
-**Method and contribution:** The authors analyse prominent supply-chain attacks and develop an investigative approach for binary analysis. Their framework considers behavioural identification, assessment of malicious intent, and the matching of suspicious behaviours through semantic graphs. The study also examines the historical presence of attack-related behaviours in malware datasets.
+**Method and contribution:** The authors organise publicly available incident information into an attack path and examine potential defensive measures that could interrupt or expose the attack.
 
-**Key findings:** The authors report that behaviours associated with the examined supply-chain attacks had existed in their dataset for approximately 13–21 years before the corresponding attacks. This suggests that some malicious behaviours may be detectable before they are used in major supply-chain incidents.
+**Key findings:** The work emphasises that the compromise involved multiple stages, from social engineering and contributor trust to build-time injection and downstream execution.
 
-**Relevance to this survey:** The study supports the importance of behavioural analysis and forensic investigation in identifying malicious software distributed through trusted channels. These ideas are relevant to examining the XZ Utils payload and its concealed execution behaviour.
+**Relevance to this survey:** It is directly incident-specific and supports the lifecycle-based analysis of preventive and detective controls.
 
-**Limitations:** The study focuses on selected historical supply-chain attacks and binary behaviour. It predates the XZ Utils incident and does not directly evaluate the specific obfuscation and build-time techniques used in CVE-2024-3094.
-
+**Limitations:** It is an early research preprint based on information available shortly after discovery; its claims should be distinguished from later peer-reviewed analysis.
 ## 16. Amft, S., Höltervennhoff, S., Panskus, R., Marky, K., and Fahl, S. (2024) — Everyone for Themselves? A Qualitative Study about Individual Security Setups of Open Source Software Contributors
 
 **Reference:** S. Amft, S. Höltervennhoff, R. Panskus, K. Marky, and S. Fahl, “Everyone for Themselves? A Qualitative Study about Individual Security Setups of Open Source Software Contributors,” in *2024 IEEE Symposium on Security and Privacy (SP)*, 2024.  
@@ -406,23 +390,21 @@ The report is an industry threat intelligence publication, not a peer-reviewed a
 
 ---
 
-## 22. Przymus, P., and Durieux, T. (2025) — Wolves in the Repository: A Software Engineering Analysis of the XZ Utils Supply Chain Attack
+## 22. Sammak, R., Rotthaler, A. L., Ramulu, H. S., Wermke, D., and Acar, Y. (2024) — Developers’ Approaches to Software Supply Chain Security: An Interview Study
 
-**Reference:** P. Przymus and T. Durieux, “Wolves in the Repository: A Software Engineering Analysis of the XZ Utils Supply Chain Attack,” in *2025 IEEE/ACM 22nd International Conference on Mining Software Repositories (MSR)*, 2025, pp. 91–102.  
-**DOI:** https://doi.org/10.1109/MSR66628.2025.00026  
-**Preprint:** https://arxiv.org/abs/2504.17473  
-**Publication type:** Peer-reviewed software engineering conference paper.
+**Reference:** R. Sammak, A. L. Rotthaler, H. S. Ramulu, D. Wermke, and Y. Acar, “Developers’ approaches to software supply chain security: An interview study,” in *Proc. 2024 Workshop on Software Supply Chain Offensive Research and Ecosystem Defenses (SCORED ’24)*, Oct. 14–18, 2024.  
+**DOI:** https://doi.org/10.1145/3689944.3696160  
+**Publication type:** Peer-reviewed research workshop paper.
 
-**Objective and scope:** The paper examines the XZ Utils supply-chain attack from a software engineering perspective, focusing on how the attacker manipulated development practices, project infrastructure, and community relationships.
+**Objective and scope:** The study investigates how developers understand and practise software supply-chain security in their work.
 
-**Method and contribution:** The authors analyse GitHub events and development artefacts to reconstruct the attack timeline and examine the evolution of the attacker's contributions and tactics.
+**Method and contribution:** The authors use an interview-based approach to explore developers’ security practices, experiences and challenges.
 
-**Key findings:** The study demonstrates that the compromise extended beyond the insertion of malicious code. The attacker used apparently helpful contributions and changes to project infrastructure to establish legitimacy and gain influence over the development process. The attack therefore exploited social and technical aspects of open-source project management.
+**Key findings:** The study provides qualitative evidence about how security responsibilities, awareness and practical constraints influence software supply-chain practices.
 
-**Relevance to this survey:** This is one of the most directly relevant research papers because it analyses the same incident. It supports the argument that software supply-chain security must consider contributor behaviour, project governance, CI/CD configuration, and repository management alongside code-level safeguards.
+**Relevance to this survey:** It complements technical analyses by examining how developer decisions and organisational practices affect the security of software production.
 
-**Limitations:** The study focuses on a single incident. Its findings are valuable for understanding the XZ Utils attack but should not automatically be generalised to every open-source project.
-
+**Limitations:** Interview findings provide contextual and qualitative insight; they do not directly measure the effectiveness of a specific technical mitigation for CVE-2024-3094.
 ---
 
 ## 23. Nocera, S., Vegas, S., Scanniello, G., and Juristo, N. (2025) — Software Composition Analysis and Supply Chain Security in Apache Projects: An Empirical Study
