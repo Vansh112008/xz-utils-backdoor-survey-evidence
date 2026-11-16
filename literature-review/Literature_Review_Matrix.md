@@ -297,4 +297,94 @@ The report is an industry threat intelligence publication, not a peer-reviewed a
 
 **Limitations:** The study focuses on selected historical supply-chain attacks and binary behaviour. It predates the XZ Utils incident and does not directly evaluate the specific obfuscation and build-time techniques used in CVE-2024-3094.
 
+## 16. Amft, S., Höltervennhoff, S., Panskus, R., Marky, K., and Fahl, S. (2024) — Everyone for Themselves? A Qualitative Study about Individual Security Setups of Open Source Software Contributors
+
+**Reference:** S. Amft, S. Höltervennhoff, R. Panskus, K. Marky, and S. Fahl, “Everyone for Themselves? A Qualitative Study about Individual Security Setups of Open Source Software Contributors,” in *2024 IEEE Symposium on Security and Privacy (SP)*, 2024.  
+**Source:** https://cispa.de/en/research/publications/79233-everyone-for-themselves-a-qualitative-study-about-individual-security-setups-of-open-source-software-contributors  
+**Publication type:** Peer-reviewed security research conference paper.
+
+**Objective and scope:** The study investigates how open-source software contributors secure their personal development environments, including repository credentials, code-signing keys, and systems used to develop and distribute software.
+
+**Method and contribution:** The researchers conducted 20 semi-structured interviews with experienced contributors to critical open-source projects. The study examines their security practices, motivations, decision-making, and experiences.
+
+**Key findings:** Contributors generally show an interest in security, but security practices are rarely discussed or formally enforced within open-source communities. Social factors such as trust, respect, and politeness can discourage contributors from questioning practices or sharing security concerns.
+
+**Relevance to this survey:** The XZ Utils incident involved a long-term compromise of trust within an open-source project. This study helps explain why contributor security, informal relationships, and community practices should be considered part of software supply-chain defence.
+
+**Limitations:** The study is based on qualitative interviews and does not establish that the same social factors caused the XZ Utils compromise. Its findings should not be treated as a direct investigation of that incident.
+
+---
+
+## 17. Wermke, D., Klemmer, J. H., Wöhler, N., Schmüser, J., Ramulu, H. S., Acar, Y., and Fahl, S. (2023) — Always Contribute Back: A Qualitative Study on Security Challenges of the Open Source Supply Chain
+
+**Reference:** D. Wermke, J. H. Klemmer, N. Wöhler, J. Schmüser, H. S. Ramulu, Y. Acar, and S. Fahl, “‘Always Contribute Back’: A Qualitative Study on Security Challenges of the Open Source Supply Chain,” in *2023 IEEE Symposium on Security and Privacy (SP)*, 2023.  
+**Source:** https://s3c2.org/research/  
+**Publication type:** Peer-reviewed security research conference paper.
+
+**Objective and scope:** The research examines how developers and organisations use open-source components and the security challenges they face when incorporating external software into their projects.
+
+**Method and contribution:** The study uses qualitative interviews with 25 software developers, architects, and engineers from industry software projects. It explores organisational practices, policies, and challenges related to the use of external open-source code.
+
+**Key findings:** Open-source components play an important role in many software projects. Although organisations often have policies or recommended practices for incorporating external code, developers frequently need more resources and support to audit the components they use.
+
+**Relevance to this survey:** The XZ Utils incident demonstrates how trust in an upstream open-source component can create downstream risk. This study helps explain the challenges organisations face when assessing the security and reliability of external dependencies.
+
+**Limitations:** The study focuses on developer and organisational experiences rather than analysing a specific malicious software incident. Its qualitative findings do not quantify the probability of a supply-chain compromise.
+
+---
+
+## 18. Muralee, S., Koishybayev, I., Nahapetyan, A., Tystahl, G., Reaves, B., Bianchi, A., Enck, W., Kapravelos, A., and Machiry, A. (2023) — ARGUS: A Framework for Staged Static Taint Analysis of GitHub Workflows and Actions
+
+**Reference:** S. Muralee, I. Koishybayev, A. Nahapetyan, G. Tystahl, B. Reaves, A. Bianchi, W. Enck, A. Kapravelos, and A. Machiry, “ARGUS: A Framework for Staged Static Taint Analysis of GitHub Workflows and Actions,” in *32nd USENIX Security Symposium*, 2023.  
+**Source:** https://www.usenix.org/conference/usenixsecurity23/presentation/muralee  
+**Publication type:** Peer-reviewed systems security conference paper.
+
+**Objective and scope:** The paper examines security risks in GitHub Actions and automated CI/CD workflows, which are commonly used to build, test, and distribute software.
+
+**Method and contribution:** The researchers introduce ARGUS, a framework that performs staged static taint analysis of GitHub workflows and actions. The framework examines how potentially untrusted data can flow through workflow components and affect security-sensitive operations.
+
+**Key findings:** Automated development workflows can introduce security weaknesses when untrusted inputs interact with privileged operations. Static analysis can help identify potentially dangerous data flows before they are exploited.
+
+**Relevance to this survey:** The XZ Utils compromise involved a malicious build process that inserted code into a distributed software artefact. ARGUS provides a relevant perspective on the security of automated development and build infrastructure.
+
+**Limitations:** The paper focuses on GitHub workflow and action security. It does not directly detect or prevent the particular obfuscation and build-time injection methods used in CVE-2024-3094.
+
+---
+
+## 19. Nahum, M., Grolman, E., Maimon, I., Mimran, D., Brodt, O., Elyashar, A., Elovici, Y., and Shabtai, A. (2024) — OSSIntegrity: Collaborative Open-Source Code Integrity Verification
+
+**Reference:** M. Nahum, E. Grolman, I. Maimon, D. Mimran, O. Brodt, A. Elyashar, Y. Elovici, and A. Shabtai, “OSSIntegrity: Collaborative open-source code integrity verification,” *Computers & Security*, vol. 144, article 103977, 2024.  
+**DOI:** https://doi.org/10.1016/j.cose.2024.103977  
+**Source:** https://www.sciencedirect.com/science/article/pii/S0167404824002827  
+**Publication type:** Peer-reviewed journal research article.
+
+**Objective and scope:** The study addresses targeted attacks against open-source software libraries and proposes a collaborative method for verifying code integrity before software is packaged and deployed.
+
+**Method and contribution:** The authors introduce OSSIntegrity, a crowdsourced and distributed code-verification framework. It integrates verification into the software build process and compares the package code against the consensus established by independent verifiers.
+
+**Key findings:** The framework aims to identify inconsistencies that may indicate unauthorised code modifications. The authors report an evaluation involving 127,000 files, with an average alert-generation time of approximately 26 seconds against the attacks considered in their evaluation.
+
+**Relevance to this survey:** The framework is relevant to the XZ Utils incident because it addresses the problem of trusting externally maintained software without independently checking code integrity. Collaborative verification could provide an additional safeguard against unauthorised modifications.
+
+**Limitations:** The framework's evaluation does not establish that it would necessarily have detected the XZ Utils backdoor. Its effectiveness depends on the verification process, participating verifiers, and the attack scenarios considered.
+
+---
+
+## 20. Rebatchi, H., Moha, N., and Bissyandé, T. F. (2024) — Dependabot and Security Pull Requests: Large Empirical Study
+
+**Reference:** H. Rebatchi, N. Moha, and T. F. Bissyandé, “Dependabot and security pull requests: large empirical study,” *Empirical Software Engineering*, vol. 29, no. 5, 2024.  
+**DOI:** https://doi.org/10.1007/s10664-024-10523-y  
+**Source:** https://hdl.handle.net/10993/62972  
+**Publication type:** Peer-reviewed journal research article.
+
+**Objective and scope:** The study investigates how automated dependency-management tools, particularly Dependabot, contribute to the identification and remediation of vulnerabilities in open-source software projects.
+
+**Method and contribution:** The authors conduct a large empirical investigation of security-related pull requests and dependency-update practices. The study examines how projects respond to automated dependency alerts and the role of these updates in software maintenance.
+
+**Key findings:** The research highlights the importance of dependency maintenance in reducing software security risks. Automated tools can help developers identify and address vulnerable dependencies, although their effectiveness depends on project response and the adoption of recommended updates.
+
+**Relevance to this survey:** The XZ Utils incident illustrates that dependency security cannot be reduced to checking whether a known vulnerability exists. Nevertheless, automated dependency monitoring remains an important component of a broader supply-chain security strategy.
+
+**Limitations:** Dependency-update automation primarily addresses known vulnerabilities and outdated packages. It cannot independently establish that a trusted maintainer or a newly released package is free from intentionally malicious code.
+
 
