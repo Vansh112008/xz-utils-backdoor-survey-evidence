@@ -135,6 +135,74 @@ The report is an industry threat intelligence publication, not a peer-reviewed a
 
 ---
 
+## 6. Andres Freund (2024) — Original disclosure of the XZ Utils backdoor
+
+**Reference:** A. Freund, “backdoor in upstream xz/liblzma leading to ssh server compromise,” oss-security mailing list, March 29, 2024.  
+**Source:** https://www.openwall.com/lists/oss-security/2024/03/29/4  
+**Publication type:** Primary incident disclosure.
+
+**Review:** This disclosure documents the initial discovery of the XZ Utils compromise. Freund describes unusual CPU consumption during SSH login attempts and errors observed while investigating `liblzma`. The investigation revealed that the upstream XZ repository and release tarballs had been compromised. The disclosure is especially important because it provides first-hand technical evidence of the incident and explains how an unexpected performance anomaly led to the discovery.
+
+**Relevance:** Primary evidence for the attack's discovery, compromised release files, and initial technical investigation.
+
+**Limitations:** This is an incident disclosure rather than a peer-reviewed research paper. It focuses on the discovery and technical findings available at the time of publication.
+
+---
+
+## 7. CVE Program / Red Hat (2024) — CVE-2024-3094 vulnerability record
+
+**Reference:** CVE Program, “CVE-2024-3094: Xz: malicious code in distributed source,” published March 29, 2024.  
+**Source:** https://www.cve.org/CVERecord?id=CVE-2024-3094  
+**Publication type:** Official vulnerability record.
+
+**Review:** The CVE record formally identifies the malicious code discovered in XZ Utils and describes how the build process extracts a prebuilt object file from a disguised test file. The resulting modified `liblzma` library can affect software linked against it. The record classifies the issue as CWE-506, Embedded Malicious Code, and assigns a CVSS 3.1 score of 10.0, indicating critical severity.
+
+**Relevance:** Provides a standardised vulnerability description, classification, and severity assessment for the case study.
+
+**Limitations:** The record is intended for vulnerability identification and classification. It does not provide a complete investigation of the attacker's activities or evaluate defensive controls.
+
+---
+
+## 8. CERT-EU (2024) — Critical Vulnerability in XZ Utils
+
+**Reference:** CERT-EU, “Critical Vulnerability in XZ Utils,” Security Advisory 2024-032, April 2, 2024.  
+**Source:** https://cert.europa.eu/publications/security-advisories/2024-032/  
+**Publication type:** Government cybersecurity advisory.
+
+**Review:** This advisory explains the security implications of CVE-2024-3094 and identifies affected Linux distributions. It describes how malicious code interferes with SSH authentication through `systemd`, potentially allowing remote command execution under specific conditions. It also recommends downgrading to an unaffected XZ Utils version and provides information about affected and unaffected distributions.
+
+**Relevance:** Useful for understanding the incident's operational impact, affected environments, and recommended mitigation measures.
+
+**Limitations:** The advisory primarily supports incident response and mitigation. It does not investigate the broader social engineering or contributor-trust aspects of the compromise in depth.
+
+---
+
+## 9. Microsoft (2024) — FAQ and guidance for the XZ Utils backdoor
+
+**Reference:** B. Brekkan, “Microsoft FAQ and guidance for XZ Utils backdoor,” Microsoft Community Hub, April 1, 2024.  
+**Source:** https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/microsoft-faq-and-guidance-for-xz-utils-backdoor/4101961  
+**Publication type:** Industry security analysis and guidance.
+
+**Review:** Microsoft's guidance explains the role of XZ Utils in Linux environments and the implications of the compromise affecting versions 5.6.0 and 5.6.1. It discusses the potential interaction between `liblzma` and OpenSSH, and provides guidance for assessing exposure and responding to the vulnerability. The publication is useful for understanding how organisations can approach vulnerability assessment and incident response when a widely used open-source dependency is compromised.
+
+**Relevance:** Connects the technical incident to enterprise security monitoring, exposure assessment, and mitigation practices.
+
+**Limitations:** The publication is vendor guidance rather than independent academic research. Its recommendations are oriented towards Microsoft's security products and enterprise users.
+
+---
+
+## 10. Red Hat (2024) — CVE-2024-3094 security analysis
+
+**Reference:** Red Hat, “CVE-2024-3094,” Red Hat Customer Portal, 2024.  
+**Source:** https://access.redhat.com/security/cve/cve-2024-3094  
+**Publication type:** Vendor security advisory and vulnerability analysis.
+
+**Review:** Red Hat describes how malicious code was inserted into XZ Utils release tarballs beginning with version 5.6.0. Its analysis explains that the build process extracts a prebuilt object file from a disguised test file and uses it to modify functions in `liblzma`. The advisory also distinguishes between affected community distributions and Red Hat Enterprise Linux products that were not affected. This illustrates why vulnerability assessment must consider the exact software distribution, package version, and build process rather than relying only on the upstream project name.
+
+**Relevance:** Provides technical details about the build-time injection mechanism and demonstrates the importance of distribution-specific vulnerability assessment.
+
+**Limitations:** The analysis focuses on Red Hat's products and ecosystem. It is not a comparative study of all Linux distributions or a peer-reviewed evaluation of software supply-chain security.
+
 ## Review Progress
 
 | Review | Source | Status |
