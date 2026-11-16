@@ -387,4 +387,97 @@ The report is an industry threat intelligence publication, not a peer-reviewed a
 
 **Limitations:** Dependency-update automation primarily addresses known vulnerabilities and outdated packages. It cannot independently establish that a trusted maintainer or a newly released package is free from intentionally malicious code.
 
+## 21. Benedetti, G., Solarin, O., Miller, C., Tystahl, G., Enck, W., Kästner, C., Kapravelos, A., Merlo, A., and Verderame, L. (2025) — An Empirical Study on Reproducible Packaging in Open-Source Ecosystems
+
+**Reference:** G. Benedetti, O. Solarin, C. Miller, G. Tystahl, W. Enck, C. Kästner, A. Kapravelos, A. Merlo, and L. Verderame, “An Empirical Study on Reproducible Packaging in Open-Source Ecosystems,” in *2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)*, 2025.  
+**DOI:** https://doi.org/10.1109/ICSE55347.2025.00136  
+**Source:** https://doi.org/10.1109/ICSE55347.2025.00136  
+**Publication type:** Peer-reviewed software engineering conference paper.
+
+**Objective and scope:** The study investigates whether software packages distributed through popular open-source ecosystems can be reproduced independently from their source code, helping establish confidence in the integrity of published software artefacts.
+
+**Method and contribution:** The authors conduct a quantitative study of 4,000 packages in each of six ecosystems: npm, Maven, PyPI, Go, RubyGems, and Cargo. They examine the reproducibility of package builds and investigate technical and configuration-related barriers.
+
+**Key findings:** Reproducibility rates vary substantially across ecosystems. The authors find that relatively straightforward infrastructure configuration and build-tool changes can substantially improve reproducibility across the ecosystems studied.
+
+**Relevance to this survey:** The XZ Utils attack exploited the gap between source repositories and distributed release artefacts. Reproducible packaging is directly relevant because independent rebuilding can help verify whether a distributed package corresponds to its claimed source.
+
+**Limitations:** The study evaluates package reproducibility rather than the detection of every form of malicious source-code contribution. Reproducible builds alone cannot establish that the source code itself is trustworthy.
+
+---
+
+## 22. Przymus, P., and Durieux, T. (2025) — Wolves in the Repository: A Software Engineering Analysis of the XZ Utils Supply Chain Attack
+
+**Reference:** P. Przymus and T. Durieux, “Wolves in the Repository: A Software Engineering Analysis of the XZ Utils Supply Chain Attack,” in *2025 IEEE/ACM 22nd International Conference on Mining Software Repositories (MSR)*, 2025, pp. 91–102.  
+**DOI:** https://doi.org/10.1109/MSR66628.2025.00026  
+**Preprint:** https://arxiv.org/abs/2504.17473  
+**Publication type:** Peer-reviewed software engineering conference paper.
+
+**Objective and scope:** The paper examines the XZ Utils supply-chain attack from a software engineering perspective, focusing on how the attacker manipulated development practices, project infrastructure, and community relationships.
+
+**Method and contribution:** The authors analyse GitHub events and development artefacts to reconstruct the attack timeline and examine the evolution of the attacker's contributions and tactics.
+
+**Key findings:** The study demonstrates that the compromise extended beyond the insertion of malicious code. The attacker used apparently helpful contributions and changes to project infrastructure to establish legitimacy and gain influence over the development process. The attack therefore exploited social and technical aspects of open-source project management.
+
+**Relevance to this survey:** This is one of the most directly relevant research papers because it analyses the same incident. It supports the argument that software supply-chain security must consider contributor behaviour, project governance, CI/CD configuration, and repository management alongside code-level safeguards.
+
+**Limitations:** The study focuses on a single incident. Its findings are valuable for understanding the XZ Utils attack but should not automatically be generalised to every open-source project.
+
+---
+
+## 23. Nocera, S., Vegas, S., Scanniello, G., and Juristo, N. (2025) — Software Composition Analysis and Supply Chain Security in Apache Projects: An Empirical Study
+
+**Reference:** S. Nocera, S. Vegas, G. Scanniello, and N. Juristo, “Software Composition Analysis and Supply Chain Security in Apache Projects: An Empirical Study,” in *2025 IEEE/ACM 22nd International Conference on Mining Software Repositories (MSR)*, 2025, pp. 103–115.  
+**DOI:** https://doi.org/10.1109/MSR66628.2025.00027  
+**Source:** https://ieeexplore.ieee.org/abstract/document/11025577  
+**Publication type:** Peer-reviewed software engineering conference paper.
+
+**Objective and scope:** The study investigates whether adopting Software Composition Analysis (SCA) tools can improve the security of software supply chains in open-source projects.
+
+**Method and contribution:** The authors use a cohort-based empirical design to analyse open-source Java Maven projects maintained by the Apache Software Foundation and hosted on GitHub. They investigate the use of OWASP Dependency-Check and examine changes in the vulnerabilities associated with project dependencies over time.
+
+**Key findings:** The results indicate that adopting SCA appears to reduce the overall number and severity of vulnerabilities, including high-severity vulnerabilities. The study also observes an increase in the identification of low-severity vulnerabilities.
+
+**Relevance to this survey:** SCA tools can help organisations identify vulnerable dependencies and improve software component visibility. However, the XZ Utils incident illustrates an important limitation: identifying known vulnerabilities in dependencies is not equivalent to verifying that a newly released dependency is free of deliberately malicious code.
+
+**Limitations:** The study focuses on Apache Java Maven projects and known dependency vulnerabilities. It does not directly evaluate the detection of malicious maintainer activity or hidden build-time backdoors.
+
+---
+
+## 24. Kinder, J. (2023) — Differential Static Analysis for Detecting Malicious Updates to Open Source Packages
+
+**Reference:** J. Kinder, “Differential Static Analysis for Detecting Malicious Updates to Open Source Packages,” in *Proceedings of the 2023 Workshop on Software Supply Chain Offensive Research and Ecosystem Defenses (SCORED '23)*, 2023, pp. 41–49.  
+**DOI:** https://doi.org/10.1145/3605770.3625211  
+**Source:** https://doi.org/10.1145/3605770.3625211  
+**Publication type:** Research workshop paper.
+
+**Objective and scope:** The paper addresses the risk of malicious code being introduced into widely used open-source packages through software updates.
+
+**Method and contribution:** The author proposes an approach based on differential static analysis. Rather than examining a package release in isolation, the approach compares successive package versions to identify suspicious code modifications.
+
+**Key findings:** The work highlights that malicious package updates can affect many downstream applications because package managers automatically distribute updates through dependency trees. Comparing versions can help identify potentially malicious modifications that deserve further investigation.
+
+**Relevance to this survey:** The XZ Utils backdoor was introduced through compromised releases of a trusted project. Differential analysis provides a relevant defensive approach for identifying unusual changes between software versions.
+
+**Limitations:** Static comparison can identify suspicious modifications but cannot reliably determine malicious intent in every case. Legitimate updates may also contain substantial code changes, while obfuscated or indirect malicious behaviour may be difficult to identify.
+
+---
+
+## 25. Shen, Y., Gao, X., Sun, H., and Guo, Y. (2025) — Understanding Vulnerabilities in Software Supply Chains
+
+**Reference:** Y. Shen, X. Gao, H. Sun, and Y. Guo, “Understanding vulnerabilities in software supply chains,” *Empirical Software Engineering*, vol. 30, article 20, 2025.  
+**DOI:** https://doi.org/10.1007/s10664-024-10581-2  
+**Source:** https://link.springer.com/article/10.1007/s10664-024-10581-2  
+**Publication type:** Peer-reviewed journal research article.
+
+**Objective and scope:** The study investigates how vulnerabilities originate in software supply chains, propagate through dependencies, can be localised, and are eventually repaired by software developers.
+
+**Method and contribution:** The authors examine 10,000 popular Java Maven artefacts and construct a detailed vulnerability dataset involving 50 libraries and 61 CVEs. They also analyse 1,280 client projects and develop a finer-grained method-level approach to assess whether vulnerabilities actually propagate into dependent applications.
+
+**Key findings:** The authors report that 99% of vulnerabilities identified in client programs originate from dependencies. They also find that 81.26% of vulnerabilities detected through package-level propagation analysis are false positives. The study highlights the importance of examining actual code-level usage rather than relying exclusively on package-level dependency relationships.
+
+**Relevance to this survey:** The research demonstrates the complexity of downstream risk assessment in software supply chains. It supports the need for accurate dependency analysis, vulnerability localisation, and coordinated remediation when a widely used component is compromised.
+
+**Limitations:** The study focuses on vulnerabilities in Java Maven projects rather than intentional backdoors. Its findings therefore provide context for dependency-risk analysis but do not directly evaluate the XZ Utils attack.
+
 
