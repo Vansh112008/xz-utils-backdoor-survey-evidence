@@ -208,7 +208,7 @@ Dynamic analysis evaluates software behaviour during execution. It can help iden
 
 Its effectiveness depends on the quality of test environments, execution coverage, and the ability to reproduce the relevant conditions.
 
-## 5.3 Software Composition Analysis
+## 5.3 Software Composition Analysis [17], [18]
 
 Software Composition Analysis (SCA) identifies third-party dependencies and checks them against known vulnerability information.
 
@@ -295,7 +295,7 @@ The figure source files are maintained in the `figures/` directory. Render them 
 
 ## 8. Classification of Reviewed Literature
 
-The reviewed literature consists of academic research, incident investigations, institutional advisories, and industry reports. These source categories contribute different forms of evidence to the understanding of software supply-chain security.
+The reviewed literature consists of academic research, incident investigations, institutional advisories, and industry reports [3]–[9], [14], [21], [25]. These source categories contribute different forms of evidence to the understanding of software supply-chain security.
 
 **Table 1. Classification of literature reviewed**
 
@@ -311,7 +311,7 @@ The reviewed literature consists of academic research, incident investigations, 
 
 ## 9. Comparative Analysis of Supply-Chain Attack Categories
 
-Software supply-chain attacks can target different stages of software development and distribution. Understanding these categories helps identify where preventive and detective controls should be implemented.
+Software supply-chain attacks can target different stages of software development and distribution [7], [14], [21], [22], [23]. Understanding these categories helps identify where preventive and detective controls should be implemented.
 
 **Table 2. Comparison of software supply-chain attack categories**
 
@@ -341,7 +341,7 @@ Different security techniques address different stages of the software supply ch
 | Software Bill of Materials | Document software components and dependencies | Supports inventory and incident response | Does not establish that listed components are trustworthy |
 | Independent code review | Examine changes through multiple reviewers | Reduces reliance on a single contributor | Cannot guarantee detection of sophisticated concealed changes |
 
-**Discussion:** No single technique is sufficient to prevent all supply-chain attacks. Static and dynamic analysis support detection, while reproducible builds, provenance, and independent reviews improve integrity and accountability. Combining these techniques provides stronger protection than relying on any one approach.
+**Discussion:** No single technique is sufficient to prevent all supply-chain attacks. Static and dynamic analysis support detection [16], [19], while reproducible builds, provenance, and independent reviews improve integrity and accountability [9], [11]–[15], [20]. Combining these techniques provides stronger protection than relying on any one approach.
 
 ## 11. Recommended Security Measures
 
@@ -368,9 +368,9 @@ The XZ Utils backdoor incident demonstrated that open-source software supply-cha
 
 The reviewed research and technical investigations show that trusted software components can become attack vectors when weaknesses in development workflows and release verification are exploited.
 
-A defence-in-depth strategy combining contributor security, independent review, reproducible builds, dependency monitoring, software provenance, and behavioural analysis can improve software supply-chain resilience [8], [11]–[16], [19], [20], [24], [25].
+A defence-in-depth strategy combining contributor security [8], [20], [25],, independent review, reproducible builds, dependency monitoring, software provenance, and behavioural analysis can improve software supply-chain resilience [8], [11]–[16], [19], [20], [24], [25].
 
-The incident also highlights the importance of sustainable security support for open-source communities. As software ecosystems become increasingly interconnected, protecting the integrity of the complete software lifecycle will remain an important cybersecurity research challenge.
+The incident also highlights the importance of sustainable security support for open-source communities [8], [20], [21], [25]. As software ecosystems become increasingly interconnected, protecting the integrity of the complete software lifecycle will remain an important cybersecurity research challenge.
 
 ---
 
