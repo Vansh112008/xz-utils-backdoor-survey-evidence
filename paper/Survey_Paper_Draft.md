@@ -314,3 +314,20 @@ The final paper will include numbered tables for:
 2. Comparative security approaches.
 3. Attack categories and their characteristics.
 4. Security recommendations and corresponding controls.
+
+## 9. Classification of Reviewed Literature
+
+The reviewed literature consists of academic research, incident investigations, institutional advisories, and industry reports. These source categories contribute different forms of evidence to the understanding of software supply-chain security.
+
+**Table 1. Classification of literature reviewed**
+
+| Literature category | Main focus | Contribution to this survey | Evidence limitations |
+|---|---|---|---|
+| Incident-specific investigations | XZ Utils backdoor and CVE-2024-3094 | Explain the attack, discovery, and technical implications | Primarily focused on one incident |
+| Academic research | Software supply-chain security | Provides research frameworks, empirical findings, and theoretical perspectives | May not directly examine the XZ incident |
+| Institutional security advisories | Vulnerability details and mitigation | Provide authoritative technical guidance and affected-version information | Usually focused on immediate response |
+| Industry security reports | Threat intelligence and practical security controls | Explain operational risks and detection approaches | Methods and findings may vary by provider |
+| Standards and technical guidance | Secure development and software integrity | Support recommendations for supply-chain protection | Guidance does not guarantee prevention |
+
+**Discussion:** The different source categories complement one another. Incident-specific investigations provide direct evidence about the XZ Utils compromise, while academic studies help explain the broader weaknesses that make software supply-chain attacks possible. Institutional advisories and technical guidance support the development of practical security recommendations.
+
