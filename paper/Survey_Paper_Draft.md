@@ -331,3 +331,19 @@ The reviewed literature consists of academic research, incident investigations, 
 
 **Discussion:** The different source categories complement one another. Incident-specific investigations provide direct evidence about the XZ Utils compromise, while academic studies help explain the broader weaknesses that make software supply-chain attacks possible. Institutional advisories and technical guidance support the development of practical security recommendations.
 
+## 10. Comparative Analysis of Supply-Chain Attack Categories
+
+Software supply-chain attacks can target different stages of software development and distribution. Understanding these categories helps identify where preventive and detective controls should be implemented.
+
+**Table 2. Comparison of software supply-chain attack categories**
+
+| Attack category | Target | Possible security consequence | Relevant security control |
+|---|---|---|---|
+| Source-code compromise | Source repositories and code changes | Unauthorised or malicious code enters a project | Independent code review and protected branches |
+| Contributor compromise | Developer accounts and maintainer access | Attackers gain legitimate-looking access | Multi-factor authentication and access monitoring |
+| Build-system compromise | Build scripts and CI/CD infrastructure | Malicious functionality enters generated artifacts | Isolated builds and build-process verification |
+| Package-distribution compromise | Release archives and package repositories | Users receive tampered software | Package signing and provenance verification |
+| Dependency compromise | Third-party libraries and updates | Downstream applications inherit malicious components | Dependency monitoring and software composition analysis |
+
+**Discussion:** The XZ Utils incident is particularly relevant to contributor trust, source changes, and release/build integrity. These categories may overlap in a sophisticated attack. Consequently, organisations should not depend on a single security control to protect their software supply chains.
+
