@@ -1,54 +1,105 @@
+
 # Literature Search Log
 
-**Research Topic:** XZ Utils Backdoor (2024)  
-**Researcher:** Vansh  
-**Course:** Foundations of Cybersecurity
+## 1. Purpose
 
-## 1. Sources and Databases
+This search was conducted to identify research and technical literature relevant to the XZ Utils backdoor incident (CVE-2024-3094), open-source software security, software supply-chain attacks, malicious package updates, and software integrity.
 
-The following sources may be used to identify relevant literature:
+## 2. Search Sources
+
+The literature identification process used the following source platforms:
 
 - Google Scholar
 - IEEE Xplore
 - ACM Digital Library
 - SpringerLink
+- USENIX
 - arXiv
-- Official cybersecurity advisories and reports
+- NIST National Vulnerability Database
+- CERT-EU
+- Open-source security advisories and technical investigations
 
-## 2. Search Queries
+Note: A platform is included in the final methodology only if it was actually searched. Remove any source platform that was not used.
 
-Record the searches you actually perform.
+## 3. Search Queries
 
-| No. | Database / Source | Search Query | Search Date | Results Found |
-|---|---|---|---|---|
-| 1 | Google Scholar | "XZ Utils backdoor" | | |
-| 2 | Google Scholar | "software supply chain attacks" | | |
-| 3 | IEEE Xplore | "software supply chain security" | | |
-| 4 | ACM Digital Library | "open-source software security" | | |
-| 5 | arXiv | "XZ Utils malicious backdoor" | | |
+The following search queries define the search strategy:
 
-## 3. Inclusion Criteria
+| Search ID | Search query | Main research area |
+|---|---|---|
+| S01 | "XZ Utils" AND "CVE-2024-3094" | Incident-specific research |
+| S02 | "XZ backdoor" AND "software supply chain" | Attack analysis |
+| S03 | "open-source software supply chain security" | General supply-chain security |
+| S04 | "malicious package updates" AND detection | Malicious code detection |
+| S05 | "reproducible builds" AND software security | Build integrity |
+| S06 | "open-source maintainer security" | Contributor and maintainer risks |
+| S07 | "software bill of materials" AND vulnerabilities | Dependency transparency |
+| S08 | "software composition analysis" AND security | Dependency analysis |
+| S09 | "GitHub Actions" AND security vulnerabilities | CI/CD security |
+| S10 | "software provenance" AND package integrity | Release verification |
 
-- Research related to XZ Utils or software supply-chain attacks.
-- Peer-reviewed papers, credible technical reports and official advisories.
-- Publications relevant to cybersecurity, malware analysis and open-source security.
-- Recent publications, preferably from 2022–2026.
+## 4. Search Date and Record Counts
 
-## 4. Exclusion Criteria
+Search date(s): To be completed using the actual dates on which each platform was searched.
 
-- Unverified claims or unreliable sources.
-- Duplicate publications.
-- Sources unrelated to the research objectives.
-- Sources without sufficient technical or research information.
+| Search ID | Platform searched | Date searched | Results identified |
+|---|---|---|---|
+| S01 | Google Scholar / Web search | To be recorded | Not recorded |
+| S02 | Google Scholar / Web search | To be recorded | Not recorded |
+| S03 | IEEE Xplore / Google Scholar | To be recorded | Not recorded |
+| S04 | ACM Digital Library / Google Scholar | To be recorded | Not recorded |
+| S05 | SpringerLink / Google Scholar | To be recorded | Not recorded |
+| S06 | Google Scholar / Web search | To be recorded | Not recorded |
+| S07 | IEEE Xplore / Google Scholar | To be recorded | Not recorded |
+| S08 | ACM Digital Library / Google Scholar | To be recorded | Not recorded |
+| S09 | Google Scholar / Web search | To be recorded | Not recorded |
+| S10 | Google Scholar / Web search | To be recorded | Not recorded |
 
-## 5. Screening Summary
+Important: The result counts and dates must be filled from actual searches. They must not be estimated or invented.
 
-| Screening Stage | Number of Sources |
-|---|---|
-| Total records identified | To be completed |
-| Duplicates removed | To be completed |
-| Records screened | To be completed |
-| Full-text sources assessed | To be completed |
-| Final sources included | To be completed |
+## 5. Inclusion Criteria
 
-**Note:** Enter actual search dates and result counts. Do not estimate or invent numbers.
+Sources were considered relevant when they:
+
+1. Addressed CVE-2024-3094 or the XZ Utils incident.
+2. Examined open-source software supply-chain security.
+3. Discussed malicious code injection, dependency compromise, or package integrity.
+4. Examined software provenance, reproducible builds, or secure CI/CD pipelines.
+5. Presented relevant empirical, theoretical, or technical findings.
+6. Were published in a credible academic, institutional, or technical source.
+7. Were preferably published between 2022 and 2026 for contemporary research coverage.
+
+## 6. Exclusion Criteria
+
+Sources were excluded when they:
+
+1. Had no meaningful connection to the research objectives.
+2. Were duplicate publications or duplicate versions.
+3. Contained insufficient bibliographic information for identification.
+4. Were unsupported opinion pieces without technical or evidentiary value.
+5. Repeated information already covered by a more authoritative source without adding value.
+
+## 7. Screening Procedure
+
+The selection process consisted of:
+
+1. Identifying potentially relevant publications through keyword searches.
+2. Reviewing titles and abstracts for relevance.
+3. Examining the full text or available technical content of shortlisted sources.
+4. Checking publication details and source credibility.
+5. Organising selected sources in the literature review matrix.
+6. Identifying recurring themes, research gaps, and security recommendations.
+
+Exact identification, duplicate-removal, screening, and inclusion counts must be added after the search records have been consolidated.
+
+## 8. Limitations
+
+The search process may not capture every publication related to software supply-chain security. Some technical reports and security advisories provide incident-specific information but are not peer-reviewed academic publications.
+
+The literature review therefore distinguishes academic research from institutional advisories, technical investigations, and industry reports.
+
+
+
+
+
+
