@@ -190,7 +190,7 @@ The thematic classification supports comparison between incident-specific invest
 
 ## 4.4 Selection Process
 
-The literature selection process is illustrated in Figure 1. The final numerical counts of identified, screened, excluded, and included records will be reported after the search log has been verified.
+The literature selection process is illustrated in Figure 1. The fresh online source-verification pass was conducted on 16 November 2026. The final curated evidence set contains 25 distinct works; stable per-query hit counts were not provided by the discovery interface, and historic student search counts were not retained. The selection flow therefore reports the current curation workflow rather than fabricated historical screening totals.
 
 ---
 
@@ -354,7 +354,7 @@ The XZ Utils incident demonstrates the need for multiple layers of security acro
 
 # Figures
 
-- Figure 1: Literature Selection Process (conceptual; numerical screening counts are not yet available).
+- Figure 1: Literature Selection Process (current online verification and curation workflow; historical search hit counts were not retained).
 - Figure 2: Taxonomy of Software Supply-Chain Attacks.
 - Figure 3: Software Supply-Chain Security Lifecycle.
 
@@ -366,7 +366,7 @@ The XZ Utils backdoor incident demonstrated that open-source software supply-cha
 
 The reviewed research and technical investigations show that trusted software components can become attack vectors when weaknesses in development workflows and release verification are exploited.
 
-A defence-in-depth strategy combining contributor security [8], [20], [25],, independent review, reproducible builds, dependency monitoring, software provenance, and behavioural analysis can improve software supply-chain resilience [8], [11]–[16], [19], [20], [24], [25].
+A defence-in-depth strategy combining contributor security [8], [20], [25], independent review, reproducible builds, dependency monitoring, software provenance, and behavioural analysis can improve software supply-chain resilience [8], [11]–[16], [19], [20], [24], [25].
 
 The incident also highlights the importance of sustainable security support for open-source communities [8], [20], [21], [25]. As software ecosystems become increasingly interconnected, protecting the integrity of the complete software lifecycle will remain an important cybersecurity research challenge.
 
@@ -418,7 +418,7 @@ The incident also highlights the importance of sustainable security support for 
 
 [21] W. Schueller and J. Wachs, “Modeling interconnected social and technical risks in open source software ecosystems,” *Big Data & Society*, 2024, doi: 10.1177/26339137241231912.
 
-[22] B. Ruan, Z. Lin, J. Liu, C. Zhang, K. Ji, and Z. Liang, “Propagation-based vulnerability impact assessment for software supply chains,” in *Proc. IEEE/ACM Int. Conf. Automated Software Engineering*, 2025, pp. 65–77, doi: 10.1109/ASE63991.2025.00014.
+[22] Y. Gu, L. Ying, Y. Pu, X. Hu, H. Chai, R. Wang, X. Gao, and H. Duan, “Investigating package related security threats in software registries,” in *Proc. IEEE Symp. Security and Privacy*, 2023, pp. 1578–1595, doi: 10.1109/SP46215.2023.10179332.
 
 [23] Y. Shen, X. Gao, H. Sun, and Y. Guo, “Understanding vulnerabilities in software supply chains,” *Empirical Software Engineering*, vol. 30, Art. no. 20, 2025, doi: 10.1007/s10664-024-10581-2.
 
