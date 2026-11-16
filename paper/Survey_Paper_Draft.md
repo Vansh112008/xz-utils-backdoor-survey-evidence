@@ -347,3 +347,21 @@ Software supply-chain attacks can target different stages of software developmen
 
 **Discussion:** The XZ Utils incident is particularly relevant to contributor trust, source changes, and release/build integrity. These categories may overlap in a sophisticated attack. Consequently, organisations should not depend on a single security control to protect their software supply chains.
 
+## 11. Comparison of Security Detection and Prevention Techniques
+
+Different security techniques address different stages of the software supply chain. Their effectiveness depends on the threat being investigated and the quality of implementation.
+
+**Table 3. Comparison of security techniques**
+
+| Technique | Primary purpose | Strength | Limitation |
+|---|---|---|---|
+| Static analysis | Examine source code without execution | Identifies suspicious code patterns and unsafe operations | May miss concealed or build-time malicious behaviour |
+| Dynamic analysis | Observe software during execution | Detects suspicious runtime behaviour | Depends on test coverage and execution conditions |
+| Software Composition Analysis | Identify dependencies and known vulnerabilities | Improves dependency visibility and vulnerability management | May not detect previously unknown malicious modifications |
+| Reproducible builds | Independently verify build outputs | Helps identify unexplained differences between artifacts | Requires controlled and repeatable build environments |
+| Software provenance | Record software origin and production information | Improves traceability and accountability | Provenance information must itself be trustworthy |
+| Software Bill of Materials | Document software components and dependencies | Supports inventory and incident response | Does not establish that listed components are trustworthy |
+| Independent code review | Examine changes through multiple reviewers | Reduces reliance on a single contributor | Cannot guarantee detection of sophisticated concealed changes |
+
+**Discussion:** No single technique is sufficient to prevent all supply-chain attacks. Static and dynamic analysis support detection, while reproducible builds, provenance, and independent reviews improve integrity and accountability. Combining these techniques provides stronger protection than relying on any one approach.
+
